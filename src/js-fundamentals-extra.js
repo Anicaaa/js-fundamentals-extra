@@ -19,17 +19,24 @@ function secondsInHours(hours) {
 console.log(secondsInHours(7));
 
 // MilesTravelled
-//
+
 // Create a function that takes a number representing speed in miles per hour,
 // a duration in minutes, and returns the distance travelled in miles rounded
 // *up* to the nearest whole mile. You can use the Math.ceil function to
 // perform the rounding. You can assume only whole numbers will be provided
 // to the function.
-//
+
 // Remember to update the module.exports definition at the bottom of the file
 // with a reference to your function.
-//
+
 // TODO: write code below
+
+function milesTravelled(speed, time) {
+  let distance = Math.ceil(speed * (time / 60));
+  return distance;
+}
+
+console.log(milesTravelled(10, 30));
 
 // KilometersToMiles
 //
@@ -116,7 +123,7 @@ module.exports = {
   a: secondsInHours,
 
   //MilesTravelled,
-  b: undefined,
+  b: milesTravelled,
 
   //KilometersToMiles,
   c: undefined,
