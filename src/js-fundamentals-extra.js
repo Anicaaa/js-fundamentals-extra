@@ -32,23 +32,28 @@ console.log(secondsInHours(7));
 // TODO: write code below
 
 function milesTravelled(speed, time) {
-  let distance = Math.ceil(speed * (time / 60));
-  return distance;
+  return Math.ceil(speed * (time / 60));
 }
 
 console.log(milesTravelled(10, 30));
 
 // KilometersToMiles
-//
+
 // Create a function that takes a number of kilometers and converts it to miles.
 // For this task assume there are exactly 1.6 kilometers in a mile. The returned
 // mile distance should be rounded to the nearest mile. You can  use the Math.round
 // function to do this.
-//
+
 // Remember to update the module.exports definition at the bottom of the file
 // with a reference to your function.
-//
+
 // TODO: write code below
+
+function kmToMiles(km) {
+  return Math.round(km * 0.621371);
+}
+
+console.log(kmToMiles(5));
 
 // MakeSentence
 //
@@ -126,7 +131,7 @@ module.exports = {
   b: milesTravelled,
 
   //KilometersToMiles,
-  c: undefined,
+  c: kmToMiles,
 
   //MakeSentence
   d: undefined,
