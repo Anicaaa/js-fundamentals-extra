@@ -52,7 +52,7 @@ describe("MakeSentence", () => {
   it("'Hello world' returns 'Hello World.'", () => {
     expect(d("Hello world")).toEqual("Hello world.");
   });
-  it("'april is the cruelest month' returns 'April is the cruelest month.'", () => {
+  fit("'april is the cruelest month' returns 'April is the cruelest month.'", () => {
     expect(d("april is the cruelest month")).toEqual(
       "April is the cruelest month."
     );

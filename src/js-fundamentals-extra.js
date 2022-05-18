@@ -13,8 +13,7 @@
 // 2. Count how many seconds are in those minutes.
 
 function secondsInHours(hours) {
-  let seconds = hours * 60 * 60;
-  return seconds;
+  return hours * 60 * 60;
 }
 console.log(secondsInHours(7));
 
@@ -56,18 +55,33 @@ function kmToMiles(km) {
 console.log(kmToMiles(5));
 
 // MakeSentence
-//
+
 // Create a function that takes a string and returns the same string with the
 // first letter capitalized and a full stop added on to the end. If the string
 // already ends with a full stop, question mark (?) or an exclamation mark(!)
 // then a full stop should not be added.
-//
+
 // You may need to the use `String.substring` method.
-//
+
 // Remember to update the module.exports definition at the bottom of the file
 // with a reference to your function.
-//
+
 // TODO: write code below
+
+function makeSentence(string) {
+  const punctuationMarks = [".", "!", "?"];
+  for (let i = 0; i < punctuationMarks.length; i++) {
+    const marks = punctuationMarks[i];
+    if (string === marks) {
+      return string[0].toUpperCase() + string.slice(1);
+    }
+    if (string !== marks) {
+      return string[0].toUpperCase() + string.slice(1) + ".";
+    }
+  }
+}
+
+console.log(makeSentence("april is the cruelest month"));
 
 // FileExtension
 //
@@ -134,7 +148,7 @@ module.exports = {
   c: kmToMiles,
 
   //MakeSentence
-  d: undefined,
+  d: makeSentence,
 
   //FileExtension
   e: undefined,
