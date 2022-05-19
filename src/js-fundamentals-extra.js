@@ -118,6 +118,28 @@ function fileExtension(str) {
 //
 // TODO: write code below
 
+function range(numbers) {
+  if (numbers <= 1) {
+    return 0;
+  }
+
+  let minimum = numbers[0];
+  let maximum = minimum;
+
+  for (let i = 0; i < numbers.length; i++) {
+    const currentValue = numbers[i];
+    if (currentValue < minimum) {
+      minimum = currentValue;
+    }
+    if (currentValue > maximum) {
+      maximum = currentValue;
+    }
+  }
+  return maximum - minimum;
+}
+
+console.log(range([-10, 21, 13, 100, 1, -100]));
+
 // CheckTransactions
 //
 // Create a function that checks if a list of banking transactions is valid for
@@ -166,7 +188,7 @@ module.exports = {
   e: fileExtension,
 
   //Range
-  f: undefined,
+  f: range,
 
   //CheckTransactions
   g: undefined,
