@@ -71,7 +71,7 @@ describe("MakeSentence", () => {
 });
 
 describe("fileExtension", () => {
-  fit("image.png returns png", () => {
+  it("image.png returns png", () => {
     expect(e("image.png")).toEqual("png");
   });
   it("file.old.pdf returns pdf", () => {

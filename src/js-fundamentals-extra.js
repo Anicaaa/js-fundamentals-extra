@@ -68,20 +68,22 @@ console.log(kmToMiles(5));
 
 // TODO: write code below
 
-function makeSentence(string) {
-  const punctuationMarks = [".", "!", "?"];
-  for (let i = 0; i < punctuationMarks.length; i++) {
-    const marks = punctuationMarks[i];
-    if (string === marks) {
-      return string[0].toUpperCase() + string.slice(1);
-    }
-    if (string !== marks) {
-      return string[0].toUpperCase() + string.slice(1) + ".";
-    }
+function makeSentence(str) {
+  const firstCharacter = str[0].toUpperCase();
+  let newString = `${firstCharacter}${str.slice(1)}`;
+
+  const punctuation = [".", ",", "!", "?"];
+
+  const lastCharacter = newString[newString.length - 1];
+
+  if (!punctuation.includes(lastCharacter)) {
+    newString += ".";
   }
+
+  return newString;
 }
 
-console.log(makeSentence("april is the cruelest month"));
+console.log(makeSentence("april is the cruelest month."));
 
 // FileExtension
 
@@ -95,19 +97,15 @@ console.log(makeSentence("april is the cruelest month"));
 
 // TODO: write code below
 
-function fileExtension(string) {
-  if (string.substring(string.lastIndexOf("png"))) {
-    return "png";
-  } else {
+function fileExtension(str) {
+  if (!str.includes(".")) {
     return "";
+  } else {
+    const indexOfDot = str.lastIndexOf(".");
+    solution = str.substring(indexOfDot + 1);
+    return solution;
   }
 }
-
-console.log(fileExtension("image"));
-
-/* const listOfFiles = ["png", "pdf", "jpeg"];
-  for (let i = 0; i < listOfFiles.length; i++) {
-    const files = listOfFiles[i]; */
 
 // Range
 //
