@@ -52,7 +52,7 @@ describe("MakeSentence", () => {
   it("'Hello world' returns 'Hello World.'", () => {
     expect(d("Hello world")).toEqual("Hello world.");
   });
-  fit("'april is the cruelest month' returns 'April is the cruelest month.'", () => {
+  it("'april is the cruelest month' returns 'April is the cruelest month.'", () => {
     expect(d("april is the cruelest month")).toEqual(
       "April is the cruelest month."
     );
@@ -71,7 +71,7 @@ describe("MakeSentence", () => {
 });
 
 describe("fileExtension", () => {
-  it("image.png returns png", () => {
+  fit("image.png returns png", () => {
     expect(e("image.png")).toEqual("png");
   });
   it("file.old.pdf returns pdf", () => {

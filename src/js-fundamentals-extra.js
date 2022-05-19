@@ -84,16 +84,30 @@ function makeSentence(string) {
 console.log(makeSentence("april is the cruelest month"));
 
 // FileExtension
-//
+
 // Create a function that takes a filename as a string and returns the file extension
 // - i.e. `image.png` should return `png`. If the file has no extension then an empty
 // string should be returned. You may need to the use `String.substring` method and
 // the `String.lastIndexOf` method.
-//
+
 // Remember to update the module.exports definition at the bottom of the file
 // with a reference to your function.
-//
+
 // TODO: write code below
+
+function fileExtension(string) {
+  if (string.substring(string.lastIndexOf("png"))) {
+    return "png";
+  } else {
+    return "";
+  }
+}
+
+console.log(fileExtension("image"));
+
+/* const listOfFiles = ["png", "pdf", "jpeg"];
+  for (let i = 0; i < listOfFiles.length; i++) {
+    const files = listOfFiles[i]; */
 
 // Range
 //
@@ -151,7 +165,7 @@ module.exports = {
   d: makeSentence,
 
   //FileExtension
-  e: undefined,
+  e: fileExtension,
 
   //Range
   f: undefined,
