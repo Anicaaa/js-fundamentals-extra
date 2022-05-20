@@ -157,6 +157,25 @@ console.log(range([-10, 21, 13, 100, 1, -100]));
 //
 // TODO: write code below
 
+function checkTransactions(transactionList, initialBalance, accountOverdraft) {
+  let transactionSum = 0;
+
+  for (let i = 0; i < transactionList.length; i++) {
+    transactionSum += transactionList[i];
+
+    let availableBalance = initialBalance + accountOverdraft;
+    let overallBalance = availableBalance + transactionSum;
+    //console.log(availableBalance, overallBalance);
+
+    if (overallBalance < 0) {
+      return false;
+    } else {
+      return true;
+    }
+  }
+}
+console.log(checkTransactions([-10, -20], 20, 15));
+
 // FilmsInGenre
 //
 // Create a function that takes an array of film objects, a film genre, and returns
@@ -169,6 +188,12 @@ console.log(range([-10, 21, 13, 100, 1, -100]));
 // with a reference to your function.
 //
 // TODO: write code below
+
+function filmGenre(fObj, fGenre) {
+  return [];
+}
+
+console.log(films, "History");
 
 // TODO: change undefined to be the name of the functions you defined
 module.exports = {
@@ -191,8 +216,8 @@ module.exports = {
   f: range,
 
   //CheckTransactions
-  g: undefined,
+  g: checkTransactions,
 
   //FilmsInGenre
-  h: undefined,
+  h: filmGenre,
 };

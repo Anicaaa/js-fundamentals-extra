@@ -144,7 +144,7 @@ const films = [
 ];
 
 describe("filmsInGenre", () => {
-  it("'History' returns 'The Last Duel' only", () => {
+  fit("'History' returns 'The Last Duel' only", () => {
     expect(h(films, "History")).toEqual(["The Last Duel"]);
   });
   it("'Sci-Fi' returns 'The Matrix Resurrections' and 'Dune'", () => {
